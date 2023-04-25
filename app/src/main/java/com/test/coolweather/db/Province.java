@@ -1,4 +1,4 @@
-package com.example.coolweather.db;
+package com.test.coolweather.db;
 
 import org.litepal.crud.DataSupport;
 import com.google.gson.annotations.SerializedName;

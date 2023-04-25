@@ -1,4 +1,4 @@
-package com.example.coolweather.gson;
+package com.test.coolweather.gson;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -10,6 +10,5 @@ public class Weather {
 
     public  Suggestion suggestion;
 
-    @SerializedName("daily_forecast")
-    public List<Forecast> forecastList;
+    @SerializedName("daily_forecast") public List<Forecast> forecastList;
 }

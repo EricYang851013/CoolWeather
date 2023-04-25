@@ -1,4 +1,4 @@
-package com.example.coolweather.util;
+package com.test.coolweather.util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

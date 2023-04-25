@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.test.coolweather.MainActivity">
 
    <fragment
        android:id="@+id/choose_area"
-       android:name="com.example.coolweather.ChooseAreaFragment"
+       android:name="com.test.coolweather.ChooseAreaFragment"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
