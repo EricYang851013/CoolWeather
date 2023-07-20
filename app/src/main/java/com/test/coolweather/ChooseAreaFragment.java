@@ -18,7 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.coolweather.R;
+import com.test.coolweather.R;
 import com.test.coolweather.db.City;
 import com.test.coolweather.db.County;
 import com.test.coolweather.db.Province;
@@ -53,8 +53,7 @@ public class ChooseAreaFragment extends Fragment {
     private Button backButton;
     private ListView listView;
     private ArrayAdapter<String> adapter;
-    private List<String> dataList = new ArrayList<>();
-
+    private List<String> dataList = new ArrayList<>();//列表数据来源
     private List<Province> provinceList;
     private List<City> cityList;
     private List<County> countyList;
@@ -83,20 +82,12 @@ public class ChooseAreaFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                querySource(position);
-            }
-        });
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentLevel == LEVEL_COUNTY){
-                    queryCities();
-                } else  if(currentLevel == LEVEL_CITY){
-                    queryProvinces();
-                }
+        listView.setOnItemClickListener((parent, view1, position, id) -> querySource(position));
+        backButton.setOnClickListener(v -> {
+            if (currentLevel == LEVEL_COUNTY){
+                queryCities();
+            } else  if(currentLevel == LEVEL_CITY){
+                queryProvinces();
             }
         });
         queryProvinces();
